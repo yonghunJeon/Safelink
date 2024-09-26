@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="styles/sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container-background">
+        <div class="sing-up-container">
+            <h2>회원가입</h2>
+            <form id="sign-up-form">
+                <!--<div class="form-group">
+                    <label for="site">관리 현장 *</label>
+                    <select id="site" name="site" required>
+                        <option value="">선택</option>
+                        <option value="1">1현장</option>
+                        <option value="2">2현장</option>
+                        <option value="3">3현장</option>
+                    </select>
+                </div>-->
+                <div class="form-group">
+                    <label for="accesskey">현장 인증 키 *</label>
+                    <input type="text" id="accesskey" name="accesskey" placeholder="발급받은 인증 키 입력" required>
+                    <button type="button" id="verify-button">인증 하기</button>
+                </div>
+                <div class="form-group">
+                    <label for="username">아이디 *</label>
+                    <input type="text" id="username" name="username" placeholder="아이디 입력 (6~20자)" required>
+                    <button type="button" onclick="checkUsername()">중복 확인</button>
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호 *</label>
+                    <input type="password" id="password" name="password" placeholder="비밀번호 입력 (8~20자)" required>
+                </div>
+                <div class="form-group">
+                    <label for="password-confirm">비밀번호 확인 *</label>
+                    <input type="password" id="password-confirm" placeholder="비밀번호 재입력" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">관리실 전화번호 *</label>
+                    <input type="text" id="phone" name="phone" placeholder="번호 입력 (지역번호 포함 '-' 제외 입력)" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">가입 완료</button>
+                </div>
+                <a href="index.html" class="cancel-btn" id="cancel-btn">가입 취소</a>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/send_user-info.js"></script>
+    <script src="js/ui-navigator.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* 전체 페이지 스타일 */
+html, 
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: auto;
+    overflow: hidden;
+}
+
+/* 로그인 페이지 스타일 */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#007bff, #ffffff);
+}
+
+/* 기본 모바일 스타일 */
+.login-container.mobile {
+    padding: 40% 0; /* 기본적으로 세로 모드 (portrait) 패딩 */
+}
+
+/* 가로 모드일 때 (landscape) */
+.login-container.mobile.landscape {
+    padding: 5% 11%;
+}
+
+/* 세로 모드일 때 (portrait) */
+.login-container.mobile.portrait {
+    padding: 40% 0;
+}
+
+/* 데스크탑 또는 태블릿에서 사용되는 스타일 */
+.login-container.desktop {
+    /* 가로가 세로보다 클 때 적용되는 스타일 */
+    @media (min-aspect-ratio: 1/1) {
+        padding: 11% 0;
+    }
+
+    /* 세로가 가로보다 클 때 적용되는 스타일 */
+    @media (max-aspect-ratio: 1/1) {
+        padding: 40% 0;
+    }
+}
+
+.login-box {
+    box-sizing: border-box;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    padding: 15px; /* 상하 30px, 좌우 20px의 패딩 */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-btn {
+    background: #00b7ff;
+}
+
+.login-btn:hover {
+    background: #0095cf;
+}
+
+.sign-up-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 30px;
+    color: #00b7ff;
+    font-size: 16px;
+    background: #f0f0f0;
+    text-decoration: none; /* 링크 스타일 제거 */
+    transition: background 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px; /* 기존 버튼의 여백 유지 */
+}
+
+.sign-up-btn:hover {
+    color: #ffffff;
+    background: #0095cf;
+}
+
+.sign-up-btn:hover p {
+    color: #ffffff;
+}
+
+.logo {
+    font-size: 90px;
+    background: #f0f0f0;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cc2020;
+}
+
+.input-box {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.input-box i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 18px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* 좌우 여백을 10px로 조정 */
+    background: #f0f0f0;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 14px;
+    box-sizing: border-box; /* padding이 width에 포함되도록 설정 */
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.options label {
+    display: flex;
+    margin-top: 0px;
+    align-items: center;
+}
+
+.options a {
+    text-decoration: none;
+    color: #777;
+}

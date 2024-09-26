@@ -1,0 +1,514 @@
+/* 전체 페이지 스타일 */
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+/* 로그아웃 버튼 스타일 */
+.logout-btn {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #00b7ff;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn i {
+    margin-left: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #0095cf;
+}
+
+/* 그리드 스타일 */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 한 줄에 하나의 아이템만 표시 */
+    gap: 5px;
+    padding: 5px;
+}
+
+.grid-item, 
+.grid-item-red, 
+.grid-item-orange, 
+.grid-item-yellow, 
+.grid-item-green, 
+.grid-item-blue, 
+.grid-item-navy, 
+.grid-item-purple, 
+.grid-item-pink, 
+.grid-item-setting,
+.grid-item-button {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.grid-item, 
+.grid-item-red, 
+.grid-item-orange, 
+.grid-item-yellow, 
+.grid-item-green, 
+.grid-item-blue, 
+.grid-item-navy, 
+.grid-item-purple, 
+.grid-item-pink {
+    padding: 10px 20px 0px 20px;
+}
+
+.grid-item-setting,
+.grid-item-button {
+    padding: 20px;
+}
+
+.grid-item-setting {
+    text-align: end;
+}
+
+.grid-item a, 
+.grid-item-red a, 
+.grid-item-orange a, 
+.grid-item-yellow a, 
+.grid-item-green a, 
+.grid-item-blue a, 
+.grid-item-navy a, 
+.grid-item-purple a, 
+.grid-item-pink a, 
+.grid-item-setting a,
+.grid-item-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.grid-item i, 
+.grid-item-red i, 
+.grid-item-orange i, 
+.grid-item-yellow i, 
+.grid-item-green i, 
+.grid-item-blue i, 
+.grid-item-navy i, 
+.grid-item-purple i, 
+.grid-item-pink i, 
+.grid-item-setting i, 
+.grid-item-button i {
+    font-size: 40px;
+    color: black;
+}
+
+.grid-item-red i {
+    color: rgb(255, 0, 0);
+}
+
+.grid-item-orange i {
+    color: rgb(255, 165, 0);
+}
+
+.grid-item-yellow i {
+    color: rgb(255, 255, 0);
+}
+
+.grid-item-green i {
+    color: rgb(0, 128, 0);
+}
+
+.grid-item-blue i {
+    color: rgb(0, 0, 255);
+}
+
+.grid-item-navy i {
+    color: rgb(0, 0, 128);
+}
+
+.grid-item-purple i {
+    color: rgb(128, 0, 128);
+}
+
+.grid-item-pink i {
+    color: rgb(255, 20, 147);
+}
+
+.grid-item p, 
+.grid-item-red p, 
+.grid-item-orange p, 
+.grid-item-yellow p, 
+.grid-item-green p, 
+.grid-item-blue p, 
+.grid-item-navy p, 
+.grid-item-purple p, 
+.grid-item-pink p, 
+.grid-item-setting p, 
+.grid-item-button p {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: black;
+}
+
+/* 서브메뉴 기본 스타일 (숨김 상태) */
+.grid-item .sub-menu, 
+.grid-item-red .sub-menu, 
+.grid-item-orange .sub-menu, 
+.grid-item-yellow .sub-menu, 
+.grid-item-green .sub-menu, 
+.grid-item-blue .sub-menu, 
+.grid-item-navy .sub-menu, 
+.grid-item-purple .sub-menu, 
+.grid-item-pink .sub-menu, 
+.grid-item-setting .sub-menu, 
+.grid-item-button .sub-menu {
+    max-height: 0; /* 숨김 상태에서는 높이 0 */
+    overflow: hidden; /* 내용 숨기기 */
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: max-height 0.5s ease-out; /* 부드러운 애니메이션 */
+}
+
+/* 서브메뉴 활성화 상태 */
+.grid-item.active .sub-menu, 
+.grid-item-red.active .sub-menu, 
+.grid-item-orange.active .sub-menu, 
+.grid-item-yellow.active .sub-menu, 
+.grid-item-green.active .sub-menu, 
+.grid-item-blue.active .sub-menu, 
+.grid-item-navy.active .sub-menu, 
+.grid-item-purple.active .sub-menu, 
+.grid-item-pink.active .sub-menu, 
+.grid-item-setting.active .sub-menu, 
+.grid-item-button.active .sub-menu {
+    max-height: 200px; /* 필요에 따라 높이를 조정 */
+}
+
+/* 하단 여백을 추가 */
+.grid-item-setting:last-child,
+.grid-item-button:last-child {
+    margin-bottom: 20px; /* 마지막 항목 하단 여백 추가 */
+}
+
+.sub-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    text-align: left; /* 메뉴 텍스트 왼쪽 정렬 */
+}
+
+.sub-menu p {
+    font-size: 15px;
+}
+
+.sub-menu li:last-child {
+    border-bottom: none;
+}
+
+/* 스위치 스타일 */
+.switches-container {
+    padding: 20px;
+    background: #f8f4ff;
+    overflow-y: visible; /* 내용이 길어질 때 스크롤 가능 */
+}
+
+.switch-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.switch-label {
+    font-size: 16px;
+    color: #333;
+    order: 1; /* 레이블이 먼저 오도록 설정 */
+}
+
+.switch {
+    order: 2; /* 스위치가 레이블 다음에 오도록 설정 */
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-left: 45px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3.5px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0095cf;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}
+
+h2 {
+    margin: 20px 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.save-btn {
+    background-color: #00b7ff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.save-btn i {
+    margin-right: 5px;
+}
+
+.save-btn:hover {
+    background: #0095cf;
+}
+
+/* Alert Settings */
+.alert-settings {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-header, .alert-option, .time-settings, .text-size, .user-auth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.alert-header {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.alert-option {
+    font-size: 14px;
+}
+
+.time-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.time-inputs {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.time-inputs input[type="time"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+}
+
+.text-size, .user-auth {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-size span, .user-auth span {
+    margin-bottom: 10px;
+}
+
+.radio {
+    margin-right: 10px;
+}
+
+.radio input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Manuals Section */
+.manuals {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.manuals button {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.manuals button:last-child {
+    margin-right: 0;
+}
+
+/* 알람 아이콘 스타일 */
+.alarm-icon {
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.alarm-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* 필요에 따라 높이 조정 */
+}
+
+.alarm-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    text-align: left;
+}
+
+.alarm-info {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 20px;
+    word-break: break-word; /* 긴 텍스트가 줄바꿈되도록 설정 */
+}
+
+.alarm-info h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.alarm-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #aaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 최대 줄 수 설정 */
+    -webkit-box-orient: vertical;
+    line-height: 1.4em; /* 줄 간격 설정 */
+    max-height: 2.8em; /* 최대 높이 설정 (줄 간격 * 최대 줄 수) */
+}
+
+.last-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* 오른쪽 정렬 */
+    position: absolute;
+    top: 45px; /* 상단에서의 간격 */
+    right: 20px; /* 오른쪽에서의 간격 */
+}
+
+.last-details p {
+    font-size: 12px;
+    color: #000000;
+    margin: 0;
+}
+
+.last-details h1 {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    width: 18px;  /* 원의 크기 설정 */
+    height: 18px; /* 원의 크기 설정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-top: 5px; /* 시간과 원 사이의 간격 */
+}
+
+.message-container {
+    color: #fff;
+}
+
+.date-info {
+    text-align: left;
+    margin-bottom: 4px;
+    color: #999;
+}
+
+.date-info p {
+    margin-top: 15px;
+    text-indent : 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.message-bubble {
+    text-align: left;
+    line-height: 1.5;
+    position: relative;
+    background-color: #f8f4ff;
+    border-radius: 10px;
+    padding: 1px 1px 5px 10px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.message-bubble p {
+    font-size: 14px;
+}
+
+.message-bubble .time-info {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #bbb;
+    margin-right: 10px;
+    margin-top: 4px;
+}

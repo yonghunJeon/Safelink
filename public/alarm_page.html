@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>SAFE LINK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/menu-bar.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!--<div id="header-component"></div>-->
+    <header-component></header-component>
+    <div class="grid-container">
+        <div class="grid-item grid-item-red">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>화재</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-item grid-item-orange">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>가스</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-item grid-item-blue">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>주의</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-item grid-item-blue">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>경보</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-item grid-item-blue">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>밸브</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-item grid-item-pink">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>에러</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-item grid-item-pink">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>단선</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-item grid-item-pink">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>단락</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-item grid-item-pink">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-stop-circle"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>정지</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-item grid-item-pink">
+            <div class="alarm-item">
+                <div class="alarm-icon">
+                    <div class="alarm-center">
+                        <i class="fas fa-unlink"></i>
+                    </div>
+                </div>
+                <div class="alarm-info">
+                    <h2>분리</h2>
+                    <p>[i-02-01-00]</p>
+                    <p>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                </div>
+                <div class="last-details">
+                    <p>오전 8:17</p>
+                    <h1>3</h1>
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 9일 금요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-02-01-00]<br>103동 3계단>08층>4호 연기식:#침실2-2호</p>
+                        <div class="time-info">오전 8:17</div>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="date-info">
+                        <p>8월 3일 토요일</p>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-05-04-00]<br>101동 3계단>02층>1호 연기식:#침실3-1호</p>
+                        <div class="time-info">오후 1:03</div>
+                    </div>
+                    <div class="message-bubble">
+                        <p>[i-03-02-00]<br>102동 2계단>15층>2호 연기식:#침실1-2호</p>
+                        <div class="time-info">오전 4:32</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <script src="js/top_menu-bar.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

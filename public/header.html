@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>SAFE LINK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/menu-bar.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <button class="menu-button"><i class="fas fa-bars"></i></button>
+        <hButton><a href="alarm_page.html"><i class="fas fa-bell"></i></a></hButton>
+        <hButton1><a href="button_page.html"><i class="fas fa-desktop"></i></a></hButton1>
+        <hButton2><a href="setting_page.html"><i class="fas fa-cog"></i></a></hButton2>
+        <button class="menu-user"><i class="fas fa-user"></i></button>
+    </header>
+    <nav id="menu" class="menu">
+        <ul>
+            <li><a href="#" id="connection-info-btn">연결 상태</a></li>
+            <li><a href="#" id="help-info-btn">문의 사항</a></li>
+            <li><a href="#" id="version-info-btn">버전 정보</a></li>
+            <li><a href="#" onclick="exitApp()">SAFE LINK 종료</a></li>
+        </ul>
+    </nav>
+    <nav id="menu1" class="menu1">
+        <div class="profile-section">
+            <i class="fas fa-user"></i>
+            <h2>화서역 푸르지오 브리시엘</h2>
+            <p><i2 class="fas fa-map-marker-alt"></i2> 경기도 수원</p>
+        </div>
+        <ul>
+            <li><a href="#" id="user-info-btn">사용자 정보</a></li>
+            <li>
+                <a href="#">
+                    푸시 알림
+                    <label class="switch">
+                        <input type="checkbox" id="alarmSwitch">
+                        <span class="slider round"></span>
+                    </label>
+                </a>
+            </li>
+        </ul>
+        <button class="logout-btn" onclick="location.href='index.html'">로그아웃<i class="fas fa-sign-out-alt"></i></button>
+    </nav>
+    <script src="js/top_menu-bar_function.js"></script>
+</body>
+</html>
