@@ -110,6 +110,11 @@ app.post('/check-username', async (req, res) => {
     }
 });
 
+// 루트 경로 처리 추가
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // 서버 시작
 app.listen(port, () => {
     console.log(`서버가 http://localhost:${port}에서 작동 중입니다.`);
