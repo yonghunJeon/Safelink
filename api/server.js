@@ -22,7 +22,7 @@ app.use(session({
 }));
 
 // 정적 파일 제공
-app.use(express.static(path.join(__dirname, 'public')));  // public 폴더를 정적 경로로 설정
+app.use(express.static(path.join(__dirname, '..', 'public')));  // public 폴더를 정적 경로로 설정
 
 // MongoDB 연결 설정
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -108,11 +108,6 @@ app.post('/check-username', async (req, res) => {
     } catch (err) {
         res.status(500).json({ exists: false, message: '아이디 확인 중 오류가 발생했습니다.' });
     }
-});
-
-// 루트 경로 처리 추가
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // 서버 시작
