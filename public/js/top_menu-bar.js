@@ -1,5 +1,3 @@
-/****상단 고정 메뉴 바****/
-//<li class="active"><a href="#">사용자 정보</a></li>
 class HeaderComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -65,27 +63,22 @@ customElements.define('header-component', HeaderComponent);
         });
 });*/
 
-/****menu -> 왼쪽 상단 메뉴, menu1 -> 오른쪽 상단 유저 아이콘 메뉴****/
 document.addEventListener('DOMContentLoaded', function () {
     function setupMenuToggle(menuId, buttonClass, otherMenuId) {
         const menu = document.getElementById(menuId);
         const menuButton = document.querySelector(buttonClass);
         const otherMenu = document.getElementById(otherMenuId);
 
-        // 메뉴 버튼 클릭 시 메뉴 열기/닫기
         menuButton.addEventListener('click', function (event) {
-            event.stopPropagation(); // 클릭 이벤트가 부모로 전파되는 것을 막음
+            event.stopPropagation();
             
-            // 다른 메뉴가 열려있다면 닫기
             if (otherMenu.classList.contains('active')) {
                 otherMenu.classList.remove('active');
             }
 
-            // 현재 메뉴 열기/닫기
             menu.classList.toggle('active');
         });
 
-        // 문서의 다른 부분을 클릭하면 메뉴 닫기
         document.addEventListener('click', function (event) {
             if (!menu.contains(event.target) && menu.classList.contains('active')) {
                 menu.classList.remove('active');
@@ -93,24 +86,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 각각의 메뉴와 버튼을 설정
     setupMenuToggle('menu', '.menu-button', 'menu1');
     setupMenuToggle('menu1', '.menu-user', 'menu');
 });
 
-// 터치 이벤트 처리를 위한 모바일 지원 코드 추가
-/*document.addEventListener('touchstart', function (event) {
-    const menu = document.querySelector('.menu.active');
-    const menu1 = document.querySelector('.menu1.active');
-
-    // 메뉴 외부를 터치했을 때 메뉴 닫기
-    if (menu || menu1 || !menu.contains(event.target)) {
-        menu.classList.remove('active');
-        menu1.classList.remove('active');
-    }
-});*/
-
-/****연결 상태****/
 document.addEventListener('DOMContentLoaded', function() {
     function showConnectionInfo() {
         Swal.fire({
@@ -127,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/****문의 사항****/
 document.addEventListener('DOMContentLoaded', function() {
     function showHelpInfo() {
         Swal.fire({
@@ -145,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/****버전 정보****/
 document.addEventListener('DOMContentLoaded', function() {
     function showVersionInfo() {
         Swal.fire({
@@ -168,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/****SAFE LINK 종료****/
 function exitApp() {
     Swal.fire({
         title: '앱을 종료하시겠습니까?',
@@ -176,16 +152,15 @@ function exitApp() {
         showCancelButton: true,
         confirmButtonText: '예',
         cancelButtonText: '아니오',
-        confirmButtonColor: '#00b7ff', // 확인 버튼 색깔
-        cancelButtonColor: '#aaa' // 취소 버튼 색깔
+        confirmButtonColor: '#00b7ff',
+        cancelButtonColor: '#aaa'
     }).then((result) => {
         if (result.isConfirmed) {
-            Android.closeApp(); // Android 네이티브 메서드 호출
+            Android.closeApp();
         }
     });
 }
 
-/****사용자 정보****/
 document.addEventListener('DOMContentLoaded', function() {
     function showUserInfo() {
         Swal.fire({
@@ -211,17 +186,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/****푸시 알림 스위치****/
 document.addEventListener('DOMContentLoaded', function() {
     const alarmSwitch = document.getElementById('alarmSwitch');
 
     alarmSwitch.addEventListener('change', function(event) {
-        // 스위치의 기본 동작을 막아 상태를 일시적으로 되돌립니다.
         event.preventDefault();
 
         const isChecked = this.checked;
 
-        // 스위치 상태를 일시적으로 되돌립니다.
         this.checked = !isChecked;
 
         Swal.fire({
@@ -235,7 +207,6 @@ document.addEventListener('DOMContentLoaded', function() {
             cancelButtonColor: '#aaa'
         }).then((result) => {
             if (result.isConfirmed) {
-                // 사용자가 '예'를 선택한 경우 스위치 상태를 변경
                 this.checked = isChecked;
                 Swal.fire({
                     title: isChecked ? '푸시 알림이 활성화되었습니다.' : '푸시 알림이 비활성화되었습니다.',
